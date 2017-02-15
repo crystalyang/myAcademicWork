@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>DBquery Application</title>
+</head>
+
+<body>
+    <form action="queryDB.php"
+          method="get">
+        <fieldset>
+            <legend>User input</legend>
+            <p>
+                <label>Album name:</label>
+                <input name="albumName" type="text" />
+            </p>
+            <p>
+                <label>Singer name:</label>
+                <input name="singerName" type="text" />
+            </p>
+            <p>
+                <label>Singer gender:</label>
+                <input type="radio" name="gender" value="F" checked/> Female
+                <input type="radio" name="gender" value="M"/> Male
+                <input type="radio" name="gender" value="G"/>Group
+            </p>
+            <p>
+                <label>Music style </label>
+                <input type="checkbox" name="style[]" value="rock"/> Rock
+                <input type="checkbox" name="style[]" value="pop"/> Pop
+                <input type="checkbox" name="style[]" value="folk"/> folk
+                <input type="checkbox" name="style[]" value="R&B"/> R&B
+            </p>
+            <p>
+                <label>Release year</label>
+                <select name="year">
+                    <option value="2017" selected>2017</option>
+                    <option value="2016" >2016</option>
+                    <option value="2015" >2015</option>
+                    <option value="2014" >2014</option>
+                    <option value="2013" >2013</option>
+                </select>
+            </p>
+            <p>
+                <input type="submit" value="Submit" />
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
