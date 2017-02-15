@@ -63,14 +63,26 @@ public class ValPalTest {
     }
 
     @Test
-    public void testPuncMarksT(){
+    public void testPuncMarks1(){
         result = testObj.valPal("aa,aa");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void testPuncMards2(){
+        result = testObj.valPal("a,aaa");
+        Assert.assertFalse(result);
+    }
+
+    @Test
+    public void testEmptyStr(){
+        result = testObj.valPal(" ");
         Assert.assertTrue(result);
     }
 
     @Test
-    public void testPuncMardsF(){
-        result = testObj.valPal("a,aaa");
+    public void testNull(){
+        result = testObj.valPal(null);
         Assert.assertFalse(result);
     }
 }
